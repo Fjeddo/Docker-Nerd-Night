@@ -5,7 +5,14 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.WebSite", "A.WebSite\A.WebSite.csproj", "{BE8E60E1-DE70-4EAA-BDFF-5BC9C186F0C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A.WebApi", "A.WebApi\A.WebApi.csproj", "{8B349C29-D43C-466D-A18E-EE8737EFFD40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.WebApi", "A.WebApi\A.WebApi.csproj", "{8B349C29-D43C-466D-A18E-EE8737EFFD40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{FD3BD2A3-A67D-4377-A38E-8102DBAA9D70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "redis", "redis", "{3C8A070B-8AF1-4E87-A9AF-8456FD0C8DC2}"
+	ProjectSection(SolutionItems) = preProject
+		Infrastructure\redis\Dockerfile = Infrastructure\redis\Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C8A070B-8AF1-4E87-A9AF-8456FD0C8DC2} = {FD3BD2A3-A67D-4377-A38E-8102DBAA9D70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90F530A3-86C5-4450-8A09-C1402521D3F0}
