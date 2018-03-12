@@ -17,7 +17,7 @@ namespace A.WebSite.Controllers
 
         [Route("")]
         [HttpPost]
-        public IActionResult Broadcast(BroadcastRequest request)
+        public IActionResult Broadcast([FromBody] BroadcastRequest request)
         {
             var now = DateTimeOffset.UtcNow;
             _hubContext.Clients.All.SendAsync("send", now, request.System, request.Message);
