@@ -1,5 +1,4 @@
 ﻿using System.Net.Http;
-using System.Net.Mime;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -11,7 +10,7 @@ namespace A.WebApi.Controllers
     public class ReportsController : Controller
     {
         private readonly IConfiguration _configuration;
-        private static HttpClient _httpClient = new HttpClient();
+        private static readonly HttpClient HttpClient = new HttpClient();
 
         public ReportsController(IConfiguration configuration)
         {
@@ -25,7 +24,7 @@ namespace A.WebApi.Controllers
             var url = _configuration["ReportingUrl"];
             var serializeObject = Newtonsoft.Json.JsonConvert.SerializeObject(request);
 
-            _httpClient.PostAsync(url, new StringContent(serializeObject, Encoding.UTF8, "application/json"));
+            HttpClient.PostAsync(url, new StringContent(serializeObject, Encoding.UTF8, "application/json"));
 
             return Ok(url);
         }
