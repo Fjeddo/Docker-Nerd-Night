@@ -26,7 +26,7 @@ namespace A.WebApi.Controllers
 
             HttpClient.PostAsync(url, new StringContent(serializeObject, Encoding.UTF8, "application/json"));
 
-            return Ok(url);
+            return Ok("Ok, monitor report sent");
         }
     }
 }
