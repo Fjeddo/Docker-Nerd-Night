@@ -18,6 +18,7 @@ namespace A.WebSite
         {
             services.AddMvc();
             services.AddSignalR();
+            //services.AddSingleton<Microsoft.Extensions.Hosting.IHostedService, RedisSubscriptionService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -29,10 +30,7 @@ namespace A.WebSite
 
             app.UseStaticFiles();
 
-            app.UseSignalR(routes =>
-            {
-                routes.MapHub<MonitorHub>("/monitorhub");
-            });
+            app.UseSignalR(routes => routes.MapHub<MonitorHub>("/monitorhub"));
 
             app.UseMvcWithDefaultRoute();
         }

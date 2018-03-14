@@ -28,5 +28,14 @@ namespace A.WebApi.Controllers
 
             return Ok("Ok, monitor report sent");
         }
+
+        [Route("publish")]
+        [HttpPost]
+        public IActionResult Publish([FromBody] SystemStatusRequest request)
+        {
+            RedisService.Publish(ServiceStack.StringExtensions.ToJson(request));
+
+            return Ok("Ok, published report");
+        }
     }
 }
