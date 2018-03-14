@@ -18,7 +18,7 @@ namespace A.WebSite
         {
             services.AddMvc();
             services.AddSignalR();
-            //services.AddSingleton<Microsoft.Extensions.Hosting.IHostedService, RedisSubscriptionService>();
+            services.AddSingleton<Microsoft.Extensions.Hosting.IHostedService, RedisSubscriptionService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

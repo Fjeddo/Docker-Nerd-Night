@@ -21,13 +21,13 @@ namespace A.WebSite
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            _redis = ConnectionMultiplexer.Connect("[redis-host]:6379");
+            _redis = ConnectionMultiplexer.Connect("pubsub:6379");
             _subscriber = _redis.GetSubscriber();
 
             return _subscriber.SubscribeAsync("monitor-reports", (channel, value) =>
             {
                 var hubContext = _serviceProvider.GetService<IHubContext<MonitorHub>>();
-                hubContext.Clients.All.SendAsync("send", DateTimeOffset.Now, "PubSub", value);
+                hubContext.Clients.All.SendAsync("send", DateTimeOffset.Now, "PubSub", value.ToString());
             });
         }
 

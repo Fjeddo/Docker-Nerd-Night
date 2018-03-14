@@ -17,7 +17,7 @@ namespace A.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //services.AddRedisPubSub();
+            services.AddRedisPubSub();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
