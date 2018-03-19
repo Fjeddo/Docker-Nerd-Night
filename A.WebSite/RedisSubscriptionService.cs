@@ -21,7 +21,7 @@ namespace A.WebSite
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            _redis = ConnectionMultiplexer.Connect("pubsub:6379");
+            _redis = ConnectionMultiplexer.Connect("pubsub");
             _subscriber = _redis.GetSubscriber();
 
             return _subscriber.SubscribeAsync("monitor-reports", (channel, value) =>

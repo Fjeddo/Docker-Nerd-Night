@@ -2,11 +2,11 @@
 <Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.0</ProjectVersion>
-    <DockerTargetOS>Windows</DockerTargetOS>
-    <ProjectGuid>4df68d8c-4480-4a4c-817b-c21b9e47dd41</ProjectGuid>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <ProjectGuid>1cb722a5-7e7b-4d51-8b97-783bfdb79940</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>http://{ServiceIPAddress}/index.html</DockerServiceUrl>
-    <DockerServiceName>a.webapi</DockerServiceName>
+    <DockerServiceUrl>http://localhost:{ServicePort}/index.html</DockerServiceUrl>
+    <DockerServiceName>a.website</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

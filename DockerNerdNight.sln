@@ -14,7 +14,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "redis", "redis", "{3C8A070B
 		Infrastructure\redis\Dockerfile = Infrastructure\redis\Dockerfile
 	EndProjectSection
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4DF68D8C-4480-4A4C-817B-C21B9E47DD41}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1CB722A5-7E7B-4D51-8B97-783BFDB79940}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{024A0A73-CEBF-42A6-A19A-C099D4DD2C7A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +35,10 @@ Global
 		{8B349C29-D43C-466D-A18E-EE8737EFFD40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B349C29-D43C-466D-A18E-EE8737EFFD40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B349C29-D43C-466D-A18E-EE8737EFFD40}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4DF68D8C-4480-4A4C-817B-C21B9E47DD41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DF68D8C-4480-4A4C-817B-C21B9E47DD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DF68D8C-4480-4A4C-817B-C21B9E47DD41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DF68D8C-4480-4A4C-817B-C21B9E47DD41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CB722A5-7E7B-4D51-8B97-783BFDB79940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB722A5-7E7B-4D51-8B97-783BFDB79940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB722A5-7E7B-4D51-8B97-783BFDB79940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB722A5-7E7B-4D51-8B97-783BFDB79940}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

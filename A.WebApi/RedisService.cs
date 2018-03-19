@@ -8,7 +8,7 @@ namespace A.WebApi
 
         public static void Register()
         {
-            var manager = new RedisManagerPool("pubsub:6379");
+            var manager = new RedisManagerPool("pubsub");
             _redisClient = manager.GetClient();
         }
 

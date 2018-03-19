@@ -3,25 +3,29 @@ version: '3'
 services:
   pubsub:
     image: pubsub
-    ports: 
-      - "6379:6379"
+    ports:
+      - "32999:6379"
     build:
       context: .
       dockerfile: Infrastructure\Redis\Dockerfile
 
-  a.webapi:
-    image: awebapi
-    build:
-      context: .
-      dockerfile: A.WebApi\Dockerfile
-    links:
-      - pubsub
-      - a.website
-
   a.website:
     image: awebsite
+    ports:
+      - "32880:80"
     build:
       context: .
-      dockerfile: A.WebSite\Dockerfile
+      dockerfile: A.WebSite/Dockerfile
     links:
+      - pubsub
+
+  a.webapi:
+    image: awebapi
+    ports:
+      - "32980:80"
+    build:
+      context: .
+      dockerfile: A.WebApi/Dockerfile
+    links:
+      - a.website
       - pubsub
