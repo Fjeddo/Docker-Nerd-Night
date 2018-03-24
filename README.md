@@ -10,3 +10,8 @@ docker-compose pekar ut:
 **a.website** "surfbar" via http://localhost:32880/index.html
 
 **pubsub** loggas på via tex '.\redis-cli.exe -p 32999''
+
+## Köra lösningen
+Man kan köra lösningen lite olika sätt:
+- **F5 i Visual Studio** ger möjlighet att debugga
+- \> **docker-compose up** i kommandotolk 
